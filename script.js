@@ -11,3 +11,5 @@ function toggleDescription(id) {
     // Toggle selected description
     element.classList.toggle('active');
 }
+
+

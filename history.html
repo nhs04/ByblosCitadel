@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script> 
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&family=EB+Garamond:wght@400;700&family=Fenix&family=Merriweather:wght@300;400&family=Radley&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Navigation -->
-     <section class="history-header">
+    <section class="header">
         <nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <div class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -22,7 +31,19 @@
                     <li><a href="reviews.html">Reviews</a></li>
                 </ul>
             </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <span class="close-btn">&times;</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="artifacts.html">Artifacts</a></li>
+                    <li><a href="museum.html">Museum</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
         </nav>
+
         <div class="content-container">
             <h1 class="title">HISTORY</h1>
         </div>
@@ -33,51 +54,136 @@
         <div class="timeline">
 
             <!-- First Tiny Rectangle -->
-            <div class="tiny-rectangle">
-                <span>av. J.-C.</span>
-                <span>B.C.</span>
-                <span>ق.م</span>
+            <div class="tiny-rectangle bc">
+                <div class="left">
+                    <span>av. J.-C.</span>
+                    <span>B.C.</span>
+                </div>
+                <div class="right">
+                    <span>ق.م</span>
+                </div>
             </div>
-
             <!-- Prehistoric Period -->
             <button class="timeline-item prehistoric" onclick="toggleDescription('desc-prehistoric')">
                 <div class="year-box">6000-3200</div>
                 <span class="period">PREHISTORIQUE<br>PREHISTORIC</span>
                 <span class="arabic">ما قبل التاريخ</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-prehistoric">
-                <p>Prehistoric details go here...</p>
-            </div>
+    <p>
+        The prehistoric period of Byblos marks the earliest known human presence in the region, dating back
+                    to the Neolithic
+                    period. Archaeological excavations have revealed traces of early settlements, including rudimentary
+                    stone structures,
+                    pottery fragments, and tools made from flint and bone. These findings suggest that Byblos was one of
+                    the oldest
+                    continuously inhabited cities in the world...
+        <span class="more-text">
+             During this era, the inhabitants of Byblos engaged in basic agriculture, animal domestication, and
+                    fishing along the
+                    Mediterranean coast. The fertile lands and proximity to the sea allowed for a stable food supply,
+                    leading to the growth
+                    of small communities. Excavations have uncovered evidence of early trade, as Byblos established
+                    connections with
+                    neighboring regions, exchanging resources such as obsidian, shells, and animal hides.
+
+                    By the Chalcolithic period (Copper Age), advancements in metallurgy began appearing, with primitive
+                    copper tools and
+                    ornaments emerging in archaeological layers. This period set the foundation for Byblos' later
+                    development as a key
+                    trading hub. Religious practices also began to take form, with the discovery of small figurines and
+                    burial sites
+                    indicating early forms of spirituality and social organization.
+
+                    By the end of the prehistoric age (around 3200 B.C.), Byblos had grown into a more structured
+                    settlement, paving the way
+                    for its rise as a significant center of trade and culture in the Eastern Mediterranean.
+        </span>
+    </p>
+    <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+</div>
+
 
             <!-- Bronze Age -->
             <button class="timeline-item bronze" onclick="toggleDescription('desc-bronze')">
                 <div class="year-box">3200-1200</div>
                 <span class="period">AGE DU BRONZE<br>BRONZE AGE</span>
                 <span class="arabic">البروزي</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-bronze">
-                <p>Byblos reached a decisive turning point in its evolution during the Early Bronze Age. The urban structure that characterized it until the Middle Bronze Age was set: a central quarter, main temples set around a central water spot, radiating ways, two southern and eastern residential quarters, wide and spaced-out constructions to the west, and the appearance of the first ramparts. These were the components of a city-state gathered around an urban and religious center and ruled by a local dynasty. These rapid changes are mainly attributed to the privileged relations established with Egypt since the fourth millennium. These contacts were intensified in the third millennium, with royal alabaster and golden gifts, inscribed on pharaonic cartouches, found in the temples of Byblos.
+                <p>Byblos reached a decisive turning point in its evolution during the Early Bronze Age. The urban
+                    structure that characterized it until the Middle Bronze Age was set: a central quarter, main temples
+                    set around a central water spot, radiating ways, two southern and eastern residential quarters, wide
+                    and spaced-out constructions to the west, and the appearance of the first ramparts. These were the
+                    components of a city-state gathered around an urban and religious center and ruled by a local
+                    dynasty. 
+                    <span class="more-text">
+                    These rapid changes are mainly attributed to the privileged relations established with
+                    Egypt since the fourth millennium. These contacts were intensified in the third millennium, with
+                    royal alabaster and golden gifts, inscribed on pharaonic cartouches, found in the temples of Byblos.
 
-                Besides the traditional Mediterranean products such as wine and oil, trade with Egypt was mainly based on cedar wood. Thanks to the forestry resources of the Lebanese mountains, Byblos ensured for nearly two millennia a preponderant place in the trade between Egypt and the Near East. A regional revolving point, Byblos imported its jewelry from Mesopotamia, its metals from Anatolia, its linen, wheat, and papyrus rolls from the valley of the Nile, and its gold from Nubia.
+                    Besides the traditional Mediterranean products such as wine and oil, trade with Egypt was mainly
+                    based on cedar wood. Thanks to the forestry resources of the Lebanese mountains, Byblos ensured for
+                    nearly two millennia a preponderant place in the trade between Egypt and the Near East. A regional
+                    revolving point, Byblos imported its jewelry from Mesopotamia, its metals from Anatolia, its linen,
+                    wheat, and papyrus rolls from the valley of the Nile, and its gold from Nubia.
 
-                At the end of the third millennium, Egypt entered a phase of recession mainly caused by struggles over power and broke its contacts with the Levant. A period of insecurity set in, attested by the destruction of Byblos caused by fire. As a result, the ramparts and the main monuments of the city underwent a long period of reconstruction.
-
-            </p>
-        </div>
+                    At the end of the third millennium, Egypt entered a phase of recession mainly caused by struggles
+                    over power and broke its contacts with the Levant. A period of insecurity set in, attested by the
+                    destruction of Byblos caused by fire. As a result, the ramparts and the main monuments of the city
+                    underwent a long period of reconstruction.
+                    </span>
+                </p>
+                <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+            </div>
 
             <!-- Iron Age -->
             <button class="timeline-item iron" onclick="toggleDescription('desc-iron')">
                 <div class="year-box">1200-333</div>
                 <span class="period">AGE DU FER<br>IRON AGE</span>
                 <span class="arabic">الحديدي</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-iron">
-                <p>The Iron Age in Lebanon witnessed the birth, the peak, and the expansion of the Phoenician culture. The main information about the city of Byblos during this period is found in epigraphic sources, especially in the Assyrian kings' annals and in the royal inscriptions found on the site. The Phoenician levels of Byblos have not been found; they were probably buried or destroyed by later structures. Only a few remains were discovered: a glacis, a guard tower, and the royal tomb where the sarcophagus of King Ahiram (10th century B.C.) was found.
+                <p>The Iron Age in Lebanon witnessed the birth, the peak, and the expansion of the Phoenician culture.
+                    The main information about the city of Byblos during this period is found in epigraphic sources,
+                    especially in the Assyrian kings' annals and in the royal inscriptions found on the site. The
+                    Phoenician levels of Byblos have not been found; they were probably buried or destroyed by later
+                    structures. Only a few remains were discovered: a glacis, a guard tower, and the royal tomb where
+                    the sarcophagus of King Ahiram (10th century B.C.) was found.
+                    <span class="more-text">
+                    The Iron Age witnessed a major event: the destructive invasion of the "Sea People", which made Egypt
+                    lose its control over the Levant. The independent Phoenician cities, including Byblos, took
+                    advantage of this political change. Egyptian political decline is clear in the narrative of
+                    Wen-Amun, the Egyptian emissary who came to Byblos around 1100 B.C. to obtain cedar wood for the
+                    construction of the ceremonial boat of Amun, the great Egyptian god. Zakarbaal, prince of Byblos,
+                    received him coldly and insisted on the independence of the city.
 
-                The Iron Age witnessed a major event: the destructive invasion of the "Sea People", which made Egypt lose its control over the Levant. The independent Phoenician cities, including Byblos, took advantage of this political change. Egyptian political decline is clear in the narrative of Wen-Amun, the Egyptian emissary who came to Byblos around 1100 B.C. to obtain cedar wood for the construction of the ceremonial boat of Amun, the great Egyptian god. Zakarbaal, prince of Byblos, received him coldly and insisted on the independence of the city.
-
-                However, this independence came to an end with the incursions of the Assyrian and Babylonian kings in the region. Since 1100 B.C., Byblos, Sidon, and Arados were paying tribute to King Tiglath-Pileser I, consisting mainly of cedar wood. These military pressures did not prevent the Phoenicians from setting out for the conquest of the Mediterranean. However, Byblos did not seem to have participated in this large expansion. It did not have any known trading posts or colonies, unlike Beirut, Tyre, and Sidon. Nevertheless, it remained a very prosperous center of trade, mainly revolving around the timber wood industry. Its craftsmen enjoyed a great reputation in Babylon at the end of the 7th century B.C.
-            </p>
+                    However, this independence came to an end with the incursions of the Assyrian and Babylonian kings
+                    in the region. Since 1100 B.C., Byblos, Sidon, and Arados were paying tribute to King
+                    Tiglath-Pileser I, consisting mainly of cedar wood. These military pressures did not prevent the
+                    Phoenicians from setting out for the conquest of the Mediterranean. However, Byblos did not seem to
+                    have participated in this large expansion. It did not have any known trading posts or colonies,
+                    unlike Beirut, Tyre, and Sidon. Nevertheless, it remained a very prosperous center of trade, mainly
+                    revolving around the timber wood industry. Its craftsmen enjoyed a great reputation in Babylon at
+                    the end of the 7th century B.C.
+                    </span>
+                </p>
+                <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
             </div>
 
             <!-- Hellenistic Period -->
@@ -85,22 +191,52 @@
                 <div class="year-box">333-64</div>
                 <span class="period">HELLENISTIQUE<br>HELLENISTIC</span>
                 <span class="arabic">الهلنستي</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-hellenistic">
-                <p>After his victory at the Battle of Issos in 333 B.C., Alexander the Great set off to conquer Phoenicia. As the Macedonian King approached the coast, Byblos surrendered without resistance and put its fleet at his disposal. At Alexander's death, Phoenicia became a battleground between his successors, the Ptolemies and the Seleucids. The latter became the masters of Phoenicia in 198 B.C. Nevertheless, at that time in Byblos, a tyrant called Kinyras seized power and spread terror.
+                <p>After his victory at the Battle of Issos in 333 B.C., Alexander the Great set off to conquer
+                    Phoenicia. As the Macedonian King approached the coast, Byblos surrendered without resistance and
+                    put its fleet at his disposal. At Alexander's death, Phoenicia became a battleground between his
+                    successors, the Ptolemies and the Seleucids. The latter became the masters of Phoenicia in 198 B.C.
+                    Nevertheless, at that time in Byblos, a tyrant called Kinyras seized power and spread terror.
 
-                Despite all these tribulations, Phoenicia enjoyed a privileged status in the organization set up by Alexander and his successors. Though not the brilliant and wealthy city it had been in the second millennium B.C., Byblos retained some of its economic, cultural, and religious prestige. This is evidenced by the coinage of the reign of Antiochus IV (175-164 B.C.), which shows the religious supremacy of the city, called "Gebal the Sacred". The dense network of houses and the industrial area found on the site prove the prosperity of the city during that period. A textile industry as well as important weaving activity also flourished.
+                    Despite all these tribulations, Phoenicia enjoyed a privileged status in the organization set up by
+                    Alexander and his successors. 
+                    <span class="more-text">
+                    Though not the brilliant and wealthy city it had been in the second
+                    millennium B.C., Byblos retained some of its economic, cultural, and religious prestige. This is
+                    evidenced by the coinage of the reign of Antiochus IV (175-164 B.C.), which shows the religious
+                    supremacy of the city, called "Gebal the Sacred". The dense network of houses and the industrial
+                    area found on the site prove the prosperity of the city during that period. A textile industry as
+                    well as important weaving activity also flourished.
 
-                Our main sources for this period are literary. Classical texts reveal that Byblos possessed wooded territories outside its ramparts, so it still was an important center of wood export and shipbuilding.
+                    Our main sources for this period are literary. Classical texts reveal that Byblos possessed wooded
+                    territories outside its ramparts, so it still was an important center of wood export and
+                    shipbuilding.
 
-                Because of the lack of systematic excavations, the development of coastal cities during this period is still largely unknown. However, epigraphic material reveals the existence of temples, gymnasia, and hippodromes. An inscription from Byblos mentions Dionysodoros and his son Aspasios, who were gymnasiarchos (directors of the gymnasium). Also, a certain Timocrates participated in the athletic contests held in Greece.</p>
+                    Because of the lack of systematic excavations, the development of coastal cities during this period
+                    is still largely unknown. However, epigraphic material reveals the existence of temples, gymnasia,
+                    and hippodromes. An inscription from Byblos mentions Dionysodoros and his son Aspasios, who were
+                    gymnasiarchos (directors of the gymnasium). Also, a certain Timocrates participated in the athletic
+                    contests held in Greece.
+                    </span>
+                </p>
+                <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
             </div>
 
             <!-- Second Tiny Rectangle -->
-            <div class="tiny-rectangle">
-                <span>av. J.-C.</span>
-                <span>B.C.</span>
-                <span>ق.م</span>
+            <div class="tiny-rectangle ad">
+                <div class="left">
+                    <span>ap. J.-C.</span>
+                    <span>A.C.</span>
+                </div>
+                <div class="right">
+                    <span>ب.م</span>
+                </div>
             </div>
 
             <!-- Byzantine Period -->
@@ -108,16 +244,45 @@
                 <div class="year-box">64-635</div>
                 <span class="period">ROMANO-BYZANTINE<br>ROMANO BYZANTINE</span>
                 <span class="arabic">الروماني-البيزنطي</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-byzantine">
-                <p>In the first century B.C., the Roman general Pompey brought Phoenicia, which had been disrupted by internal wars, to peace. However, it was not until Emperor Augustus’s reign (27 B.C.–14 A.D.) that Roman peace was proclaimed and order restored. Byblos flourished under his reign, as attested by the magnificence of public buildings and by the numerous monetary mints displaying Augustus’ head on the reverse. Following this expansion, the provincial city started to develop and witnessed an urban reorganization, thanks mainly to donations from Herod the Great. The prestige of Byblos as a pilgrimage city is primarily due to its numerous cult places, in particular, the sanctuary of Adonis, which is located in its territory.
+                <p>In the first century B.C., the Roman general Pompey brought Phoenicia, which had been disrupted by
+                    internal wars, to peace. However, it was not until Emperor Augustus’s reign (27 B.C.–14 A.D.) that
+                    Roman peace was proclaimed and order restored. Byblos flourished under his reign, as attested by the
+                    magnificence of public buildings and by the numerous monetary mints displaying Augustus’ head on the
+                    reverse. Following this expansion, the provincial city started to develop and witnessed an urban
+                    reorganization, thanks mainly to donations from Herod the Great. The prestige of Byblos as a
+                    pilgrimage city is primarily due to its numerous cult places, in particular, the sanctuary of
+                    Adonis, which is located in its territory.
+<span class="more-text">
+                    Under Roman occupation, the Hellenistic culture was still prevailing in Byblos and the region.
+                    Numerous Greek inscriptions were uncovered, and outstanding philosophers such as Aurelius and
+                    Aspasios emerged. The historian and grammarian Philo of Byblos asserts in his work about the Gods of
+                    Phoenicia that Byblos is one of the oldest cities in the world.
 
-                Under Roman occupation, the Hellenistic culture was still prevailing in Byblos and the region. Numerous Greek inscriptions were uncovered, and outstanding philosophers such as Aurelius and Aspasios emerged. The historian and grammarian Philo of Byblos asserts in his work about the Gods of Phoenicia that Byblos is one of the oldest cities in the world.
+                    Several Roman texts praise the benefits of local wine, Biblinos oinos, which was compared with the
+                    wine of Lesbos by Athenaios of Naukratis in the second century A.D. Known for its papyrus trade and
+                    wine export, Byblos became, during the Roman period, one of the linen commercial centers. Under the
+                    reign of Emperor Hadrian (117-135 A.D.), the forests of Byblos' territory belonged to the imperial
+                    domain and were carefully regulated by inscriptions limiting forestry exploitation. Four tree
+                    species were reserved for the state: cedar, pine, oak, and juniper. The exportation of wood via the
+                    port of Byblos served all the naval building sites of the region and the empire's construction
+                    projects.
 
-                Several Roman texts praise the benefits of local wine, Biblinos oinos, which was compared with the wine of Lesbos by Athenaios of Naukratis in the second century A.D. Known for its papyrus trade and wine export, Byblos became, during the Roman period, one of the linen commercial centers. Under the reign of Emperor Hadrian (117-135 A.D.), the forests of Byblos' territory belonged to the imperial domain and were carefully regulated by inscriptions limiting forestry exploitation. Four tree species were reserved for the state: cedar, pine, oak, and juniper. The exportation of wood via the port of Byblos served all the naval building sites of the region and the empire's construction projects.
-
-                The Roman Levant converted to Christianity around the middle of the 4th century A.D., with the conversion of Emperor Constantine to the new religion. In the Byzantine period, Byblos, seat of a bishopric, belonged to the province of Marine Phoenicia, which witnessed an era of unity and prosperity. Numerous remains were uncovered by excavators and completed by accidental findings. The only visible remains today are the residential quarter in the northeastern sector of the site and a church in the old city, the current "Our Lady of Deliverance". 
-            </p>
+                    The Roman Levant converted to Christianity around the middle of the 4th century A.D., with the
+                    conversion of Emperor Constantine to the new religion. In the Byzantine period, Byblos, seat of a
+                    bishopric, belonged to the province of Marine Phoenicia, which witnessed an era of unity and
+                    prosperity. Numerous remains were uncovered by excavators and completed by accidental findings. The
+                    only visible remains today are the residential quarter in the northeastern sector of the site and a
+                    church in the old city, the current "Our Lady of Deliverance".
+                    </span>
+                </p>
+                <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
             </div>
 
             <!-- Arab & Medieval Period -->
@@ -125,22 +290,44 @@
                 <div class="year-box">635-1516</div>
                 <span class="period">ARABE ET MEDIEVALE<br>ARAB AND MEDIEVAL</span>
                 <span class="arabic">الحكم العربي والقرون الوسطى</span>
+                <div class="right-rectangle"></div>
+                <div class="horizontal-bar"></div>
+                <div class="horizontal-bar second"></div>
+
+
             </button>
             <div class="description" id="desc-medieval">
-                <p>During the early centuries of the Arab conquest, Jbeil was attached to the juridical district (jund) of Damascus. There are no remaining traces in Byblos of the Umayyad and Abbasid periods, which were periods of splendor in the history of the Levant. In the eleventh century, the Fatimid dynasty of Egypt extended its rule towards the Levantine coast, which fell in 1095 under the direct control of the Banu ‘Ammar emirs, a pro-Fatimid dynasty.
+                <p>During the early centuries of the Arab conquest, Jbeil was attached to the juridical district (jund)
+                    of Damascus. There are no remaining traces in Byblos of the Umayyad and Abbasid periods, which were
+                    periods of splendor in the history of the Levant. In the eleventh century, the Fatimid dynasty of
+                    Egypt extended its rule towards the Levantine coast, which fell in 1095 under the direct control of
+                    the Banu ‘Ammar emirs, a pro-Fatimid dynasty.
 
-                In 1104, Byblos was taken by Count Raymond de Saint Gilles and became a feudal property administered by a Genoese family, the Embriaci, known as the "Lords of Gibelet". The Crusaders’ domination continued until 1187, when Saladin was victorious over Guy de Lusignan, King of Jerusalem. Jbeil then passed to the Ayyubid dynasty for a short period before it was once again captured by the Franks. During this period, two earthquakes devastated Jbeil, causing severe damage and the collapse of parts of the castle.
+                    In 1104, Byblos was taken by Count Raymond de Saint Gilles and became a feudal property administered
+                    by a Genoese family, the Embriaci, known as the "Lords of Gibelet". The Crusaders’ domination
+                    continued until 1187, when Saladin was victorious over Guy de Lusignan, King of Jerusalem. Jbeil
+                    then passed to the Ayyubid dynasty for a short period before it was once again captured by the
+                    Franks. 
+                    <span class="more-text">
+                    During this period, two earthquakes devastated Jbeil, causing severe damage and the collapse
+                    of parts of the castle.
 
-                The thirteenth century was marked by incessant struggles between the members of the Embriaci family and their sovereign lords, the Bohemonds. As a result, Jbeil suffered and lost its importance. In 1266, the Mamluk Sultan Baybars captured the city. He restored its fortifications and ultimately attached it to the district of Beirut.
+                    The thirteenth century was marked by incessant struggles between the members of the Embriaci family
+                    and their sovereign lords, the Bohemonds. As a result, Jbeil suffered and lost its importance. In
+                    1266, the Mamluk Sultan Baybars captured the city. He restored its fortifications and ultimately
+                    attached it to the district of Beirut.
 
-                Towards the end of the fifteenth century, a local family, the Banu Hamada, governed Jbeil until the Ottoman arrival.</p>
+                    Towards the end of the fifteenth century, a local family, the Banu Hamada, governed Jbeil until the
+                    Ottoman arrival.
+                </span></p>
+                 <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
             </div>
 
         </div>
     </section>
 
     <!-- Footer -->
-   <footer>
+    <footer>
         <div class="footer-container">
             <div class="footer-column">
                 <h4><a href="team.html">Our Team</a></h4>
@@ -158,17 +345,21 @@
             <div class="footer-item">
                 <i class="fas fa-phone"></i>
                 <p>+961 9 540 001</p>
-            </div>            
+            </div>
             <div class="footer-item">
                 <i class="fas fa-envelope"></i>
-                <p>bybloscitadel@yahoo.com</p>
+                <p>ljs09@mail.aub.edu</p>
             </div>
-        </div>
-
-        <div class="copyright">
-            <p>&copy; 2025 AUB STUDENTS. All Rights Reserved</p>
         </div>
     </footer>
 
+     <!-- Copyright -->
+      <div class="copyright">
+    <img src="imgs/daad_logo_suppl_de+en_h_basic_rgb-removebg-preview.png" alt="DAAD logo" class="logo daad">
+    <p>&copy; 2025 AUB STUDENTS - All Rights Reserved</p>
+    <img src="imgs/AUB_Main_Horizontal_RGB-01.png" alt="AUB logo" class="logo">
+    </div>
+    
 </body>
+
 </html>

@@ -156,3 +156,31 @@ function toggleReadMore(button) {
         button.textContent = "Read More";   // Revert button text
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const vrPopup = document.getElementById("vr-popup");
+    const vrOpenButton = document.querySelector(".button"); 
+    const vrCloseButton = document.querySelector(".vr-close");
+
+    // Hide popup on page load
+    vrPopup.style.display = "none";
+
+    // Open popup when clicking "Start Virtual Tour"
+    vrOpenButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent page reload
+        vrPopup.style.display = "flex";
+    });
+
+    // Close popup when clicking the close button
+    vrCloseButton.addEventListener("click", function () {
+        vrPopup.style.display = "none";
+    });
+
+    // Close popup when clicking outside the content
+    window.addEventListener("click", function (event) {
+        if (event.target === vrPopup) {
+            vrPopup.style.display = "none";
+        }
+    });
+});

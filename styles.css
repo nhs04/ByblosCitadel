@@ -146,6 +146,16 @@ h3 {
     background-repeat: no-repeat;
 }
 
+.museum-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('imgs/museum renders_2 - Photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* History Header - Fixed with Transparent Separator */
 .history-header {
     position: sticky;
@@ -306,7 +316,7 @@ nav {
     top: 18%;
     left: 7%;
     width: 300px;
-    color: #4A2E1C;
+    color: rgb(252, 247, 231);
 }
 
 .textbot-virtualtour h2 {
@@ -466,14 +476,16 @@ footer {
     color: #3b2416;
     background-color: #eee8e2;
     width: 100%;
-    text-align: center;
     flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
 }
 
 .copyright .logo {
     height: 30px;
     max-width: 100px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .copyright .logo.daad {
@@ -481,13 +493,39 @@ footer {
     max-width: 200px;
 }
 
-/* Ensure full-width stretching */
 .copyright p {
     flex-grow: 1;
+    font-weight: 500;
     text-align: center;
-    font-weight:500;
+    margin: 0 10px;
 }
 
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .copyright {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .copyright .logo {
+        height: auto;
+        max-width: 20%;
+    }
+
+    .copyright .logo.daad {
+        height: auto;
+        max-width: 30%;
+    }
+
+    .copyright p {
+        font-size: 5px;
+        width: 20%;
+        padding-right: 20px;
+        
+    }
+}
 
 @media (max-width: 768px) {
     .header {
@@ -521,6 +559,7 @@ footer {
 
     .textbot-virtualtour h2 {
         font-size: 30px;
+        max-width: 10px;
     }
     
     .textbot-virtualtour p {
@@ -582,11 +621,6 @@ footer {
         gap: 5px;
     }
 
-    .copyright {
-        text-align: center;
-        width: 100%;
-        margin-top: 5px;
-    }
 }
 
 /* Artifacts Container */
@@ -1717,6 +1751,8 @@ html, body {
 .museum-objects {
     text-align: center;
     padding: 50px 0;
+    background-color: #e6e0da;
+    
 }
 
 .object-grid {
@@ -1728,27 +1764,28 @@ html, body {
 }
 
 .object-card {
-    background: #EDE5DC;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
 
 .object-card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .object-card img {
     width: 100%;
     border-radius: 10px;
+    max-height: 200px;
 }
 
 /* Time Travel Section */
 .time-travel {
     text-align: center;
     padding: 40px 0;
+    background-color: #e9e5e2;
 }
 
 /* Flexbox to arrange two before-after containers side by side */

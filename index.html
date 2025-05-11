@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Byblos Citadel</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,8 @@
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="history.html">History</a></li>
-                    <li><a href="artifacts.html">Artifacts</a></li>
                     <li><a href="museum.html">Museum</a></li>
+                    <li><a href="artifacts.html">Artifacts</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
                 </ul>
             </div>
@@ -33,8 +33,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="history.html">History</a></li>
-                    <li><a href="artifacts.html">Artifacts</a></li>
                     <li><a href="museum.html">Museum</a></li>
+                    <li><a href="artifacts.html">Artifacts</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
                 </ul>
             </div>
@@ -53,8 +53,7 @@
                 <a href="#" class="button">Start Virtual Tour</a>
             </div> -->
             <div class="textbot-virtualtour">
-                <p style="font-size: 18px;">“A Fortress of Civilizations” <br>
-                    Step into the heart of Byblos - where Crusaders built upon Phoenician stones, and 
+                <p style="font-size: 18px; color: #4A2E1C; font-weight: 600;"> Step into the heart of Byblos - where Crusaders built upon Phoenician stones, and 
                     history echoes in every wall.</p>
             </div>
             
@@ -123,6 +122,7 @@
     </div>
 </section>
 
+
     <!-- Time Travel Section -->
     <section class="time-travel">
     <h2>Byblos Through Time</h2>
@@ -140,6 +140,38 @@
         </div>
     </div>
 </section>
+
+<section class="timeline-section">
+  <h2>Historical Timeline</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">📜</div>
+      <div class="timeline-content">
+        <h3><em>1100 BC:</em> Phoenician walls surround the city</h3>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🏛️</div>
+      <div class="timeline-content">
+        <h3><em>64 BC:</em> Roman influence starts</h3>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">⚔️</div>
+      <div class="timeline-content">
+        <h3><em>12th Century:</em> Crusader Citadel built</h3>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">🧱</div>
+      <div class="timeline-content">
+        <h3><em>Modern:</em> Restoration and excavation</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <footer>
         
@@ -189,7 +221,22 @@
     </div>
 </div>
 
-    <script src="script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>
+
 
 </body>
 </html>

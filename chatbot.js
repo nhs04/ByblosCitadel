@@ -29,7 +29,7 @@ function sendMessage() {
     const botPlaceholder = addMessage("bot", "");
     const dotsInterval = startLoadingDots(botPlaceholder);
 
-    fetch("http://localhost:5050/chat", {
+    fetch("https://byblos-chatbot.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: msg })

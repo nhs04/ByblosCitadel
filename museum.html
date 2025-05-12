@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museum - Byblos Citadel</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body class ="museum-body">
+
+<body class="museum-body">
     <section class="header">
         <nav>
             <div class="hamburger-menu">
@@ -37,18 +39,19 @@
             </div>
         </nav>
         <div class="content-container">
-            <h1 class="title">MUSEUM</h1> 
+            <h1 class="title">MUSEUM</h1>
         </div>
     </section>
 
-       <section class="museum-home">
+    <section class="museum-home">
         <div class="content-container">
             <div class="textbot-virtualtour">
                 <h2>Virtual Tour</h2>
-                <p>Step into history and explore Byblos Citadel like never before. Discover ancient ruins, rich culture, and hidden stories—all from your screen. Start your journey now!</p>
+                <p>Step into history and explore Byblos Citadel like never before. Discover ancient ruins, rich culture,
+                    and hidden stories—all from your screen. Start your journey now!</p>
                 <a href="#" class="button">Start Virtual Tour</a>
             </div>
-            
+
         </div>
     </section>
 
@@ -98,11 +101,32 @@
     </footer>
 
     <!-- Copyright -->
-      <div class="copyright">
-    <img src="imgs/daad_logo_suppl_de+en_h_basic_rgb-removebg-preview.png" alt="DAAD logo" class="logo daad">
-    <p>&copy; 2025 AUB STUDENTS - All Rights Reserved</p>
-    <img src="imgs/AUB_Main_Horizontal_RGB-01.png" alt="AUB logo" class="logo">
+    <div class="copyright">
+        <img src="imgs/daad_logo_suppl_de+en_h_basic_rgb-removebg-preview.png" alt="DAAD logo" class="logo daad">
+        <p>&copy; 2025 AUB STUDENTS - All Rights Reserved</p>
+        <img src="imgs/AUB_Main_Horizontal_RGB-01.png" alt="AUB logo" class="logo">
     </div>
 
+    <!-- Genie Toggle -->
+    <div id="chatbot-toggle">
+        <img src="imgs/genie2.png" alt="Genie Icon" id="genie-icon" />
+        <div id="lamp-tooltip">Ask your virtual guide about the Citadel</div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="hidden">
+        <div class="chat-window">
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your question..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="chatbot.js"></script>
+
 </body>
+
 </html>

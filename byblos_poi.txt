@@ -1,0 +1,102 @@
+[section=Roman columns]
+- Visit the Roman amphitheater near the southern wall.
+- View the columns lined along the Roman street.
+- Spot inscriptions and carvings from the Roman imperial era.
+
+[section=Crusader towers]
+- Climb the central tower for panoramic views.
+- Discover Crusader-era weapons in the defense rooms.
+- Learn how the Crusaders repurposed ancient ruins for fortification.
+
+[section=Phoenician ruins]
+- Explore the ancient well and foundational walls.
+- Discover burial chambers and sarcophagi.
+- See the ruins of Phoenician temples and trade facilities.
+
+[section=Ancient walls and gates]
+- Walk through the original city gate.
+- Examine construction layers showing different civilizations.
+- Enjoy a guided explanation of fortification techniques.
+
+[preference=Indoors]
+- Visit the Citadel Museum with artifacts from Phoenician, Roman, and Crusader times.
+- Spend time in the shaded exhibits hall with educational panels.
+
+[preference=Outdoors]
+- Stroll through the citadel gardens and ruins.
+- Take in views of the sea and ancient harbor from the outer wall.
+- Sit in the Roman amphitheater or relax in the stone courtyard.
+- Go to the rooftop of the citadel to get a panoramic view 
+- Visit the temple of Baalat Gebal and Temple of the Obelisks 
+
+
+[preference=Balanced]
+- Start with an outdoor exploration, then move into the museum for a break.
+
+[stay=Hotel]
+- Byblos Sur Mer Hotel: Sea views, rooftop dining, 5-min walk to Citadel.
+- Monoberge Hotel: Budget-friendly, central location, modern rooms.
+
+[stay=Airbnb]
+- Phoenician-styled flat next to the old souks.
+- Romantic stone house with garden patio near the port.
+
+[stay=Boutique]
+- Aleph Boutique Hotel: Stylish, rooftop lounge, close to the beach.
+- L'Hotel de Mon Père: Quiet hillside stay, traditional décor.
+
+[food=Traditional Lebanese]
+- Feniqia: Mezze, grills, and arak in an old-stone setting.
+- Bab el Mina: Traditional seafood-meets-Lebanese by the port.
+
+[food=Seafood]
+- Chez Pepe: Legendary fish and seafood on the waterfront.
+- Locanda: Elegant seafood plates with sunset views.
+
+[food=Street food]
+- Malak el Taouk: Quick taouk wraps and fries.
+- Saj Express: Fresh manakish and saj wraps by the souk.
+
+[food=Open to anything]
+- Range of options around the old port and souk, from sushi to burgers.
+
+[photospots]
+- Top of the Crusader Tower
+- Roman columns at sunset
+- Byblos harbor with Citadel in background
+- Museum’s sarcophagus room
+
+[knowledge=I know some]
+- Add short trivia and labels to points of interest.
+- Mention key timelines and context without going too deep.
+
+[knowledge=I'm new]
+- Begin with a brief historical overview of Byblos.
+- Offer context before describing each monument.
+
+[knowledge=Very interested]
+- Include archaeological insights and historical theories.
+- Recommend reading panels, attending a local guided tour.
+ 
+[group_advice]
+friends | explore Phoenician walls together, do photo scavenger hunt
+couple | go to temple ruins then take sunset walk at port
+solo | start with museum, take notes at quiet spots, reflect
+
+[start_time=Morning]
+- Time: 8:00 AM – 11:00 AM
+- Begin your visit with the Roman columns bathed in morning light — perfect for clear, crisp photos.
+- Continue with the outdoor ruins and Crusader towers while it's cool and less crowded.
+- Around 10:30 AM, step inside the Citadel Museum for a guided history walkthrough.
+
+[start_time=Afternoon]
+- Time: 12:00 PM – 3:30 PM
+- Start your tour with the shaded exhibits of the Citadel Museum to avoid midday heat.
+- Around 1:30 PM, head outdoors to explore the ancient walls and Phoenician ruins.
+- End the visit with a relaxing break in the amphitheater or under the old olive trees.
+
+[start_time=Sunset]
+- Time: 4:00 PM – 6:30 PM
+- Begin outdoors with the Phoenician ruins and Crusader towers while the light softens.
+- At 5:30 PM, climb the tower for panoramic views of the sun setting over the sea.
+- Wrap up at 6:15 PM near the harbor, then enjoy dinner at a nearby rooftop restaurant.

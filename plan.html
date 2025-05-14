@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Your Visit</title>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background: rgb(233, 229, 226);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper {
+            width: 95%;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .page-title {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: rgb(74, 46, 28);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .chat-container {
+            background: white;
+            border: 2px solid rgb(74, 46, 28);
+            border-radius: 18px;
+            height: 600px;
+            overflow-y: auto;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            scroll-behavior: smooth;
+        }
+
+        .chat-log {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            padding: 12px 16px;
+            border-radius: 18px;
+            max-width: 70%;
+            font-size: 16px;
+            line-height: 1.5;
+            font-family: 'Satoshi', sans-serif;
+            word-wrap: break-word;
+            display: inline-block;
+            clear: both;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInSlide 0.5s forwards;
+        }
+
+        @keyframes fadeInSlide {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bot {
+            background-color: #E4D9CE;
+            color: rgb(74, 46, 28);
+            align-self: flex-start;
+            margin-right: auto;
+            border-top-left-radius: 0;
+            text-align: left;
+            animation-name: slideInLeft;
+        }
+
+        .user {
+            background-color: rgb(74, 46, 28);
+            color: white;
+            align-self: flex-end;
+            margin-left: auto;
+            border-top-right-radius: 0;
+            text-align: right;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-40px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #options {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .option-btn {
+            padding: 10px 18px;
+            border-radius: 12px;
+            background-color: rgb(74, 46, 28);
+            color: white;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-family: 'Satoshi', sans-serif;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInSlide 0.4s forwards;
+        }
+
+        .option-btn:hover {
+            background-color: #3b2416;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="page-title">Plan Your Visit</h2>
+        <div class="chat-container">
+            <div class="chat-log" id="chat-log"></div>
+            <div id="options"></div>
+        </div>
+    </div>
+
+    <script>
+        let sessionId = null;
+        let step = 0;
+        const chatLog = document.getElementById("chat-log");
+        const optionsDiv = document.getElementById("options");
+
+        const steps = [
+            { q: "🕒 When do you plan to start your visit?", o: ["Morning", "Afternoon", "Sunset"] },
+            { q: "⏱️ How much time can you spend at the Citadel?", o: ["Less than 1 hour", "1–2 hours", "2+ hours"] },
+            { q: "👥 Are you visiting solo, as a couple, with family, or in a group?", o: ["Solo", "Couple", "Family", "Friends/group"] },
+            { q: "📚 What is your main goal for visiting the Citadel?", o: ["Learn historical facts", "Explore ruins and architecture", "Just enjoy the scenery and take photos"] },
+            { q: "🏝️ Which sections of the Citadel are you most interested in?", o: ["Crusader towers", "Phoenician ruins", "Roman columns", "Ancient walls and gates"] },
+            { q: "🏛️ Do you prefer being indoors or outdoors?", o: ["Mostly indoors", "Mostly outdoors", "Balanced"] },
+            { q: "📸 Should I highlight the best photo spots during your tour?", o: ["Yes", "No"] },
+            { q: "🧠 Do you already know Byblos history, or is this your first time?", o: ["I know some", "I’m new", "Very interested in ancient history"] },
+            { q: "🌍 Are you visiting as a tourist, student, researcher, or local?", o: ["Tourist", "Student", "Researcher", "Local visitor"] },
+            { q: "🕓 Will you stay in Byblos after the Citadel?", o: ["No", "A few hours", "Staying overnight"] },
+            { q: "🍽️ Want food suggestions nearby after your visit?", o: ["Traditional Lebanese", "Seafood", "Street food", "I’m open to anything"] }
+        ];
+
+        function waitForAnimation(element) {
+            return new Promise(resolve => {
+                element.addEventListener("animationend", resolve, { once: true });
+            });
+        }
+
+        async function addMessage(text, sender = "bot") {
+            const msg = document.createElement("div");
+            msg.className = `message ${sender}`;
+            msg.textContent = text;
+            chatLog.appendChild(msg);
+            msg.scrollIntoView({ behavior: "smooth", block: "end" });
+            await waitForAnimation(msg);
+            return msg;
+        }
+
+        async function showOptions(stepObj) {
+            optionsDiv.innerHTML = "";
+            await new Promise(r => setTimeout(r, 100)); // Reduced delay for faster appearance
+            stepObj.o.forEach(opt => {
+                const btn = document.createElement("button");
+                btn.className = "option-btn";
+                btn.textContent = opt;
+                btn.onclick = async () => {
+                    optionsDiv.innerHTML = "";
+                    await addMessage(opt, "user");
+                    const loadingBubble = await addMessage("Typing...", "bot");
+
+                    fetch("http://127.0.0.1:5051/start", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ message: opt, session_id: sessionId })
+                    })
+                        .then(res => res.json())
+                        .then(async data => {
+                            if (!sessionId) sessionId = data.session_id;
+                            loadingBubble?.remove();
+
+                            if (step < steps.length) {
+                                await addMessage(steps[step].q, "bot");
+                                await showOptions(steps[step]);
+                                step++;
+                            } else {
+                                const waiting = await addMessage("🛠 Preparing your personalized itinerary...", "bot");
+                                fetch("http://127.0.0.1:5051/itinerary", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify({ session_id: sessionId })
+                                })
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        waiting?.remove();
+                                        addMessage(data.itinerary, "bot");
+                                    });
+                            }
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            loadingBubble?.remove();
+                            addMessage("⚠️ Something went wrong. Please try again.", "bot");
+                        });
+                };
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        window.onload = async () => {
+            await new Promise(r => setTimeout(r, 1000));
+            await addMessage("Welcome! Let’s plan your visit to the Byblos Citadel. I’ll just ask you a few quick questions to tailor your experience.", "bot");
+            await addMessage(steps[step].q, "bot");
+            await showOptions(steps[step]);
+            step++;
+        };
+    </script>
+</body>
+
+</html>

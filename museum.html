@@ -49,7 +49,8 @@
                 <h2>Virtual Tour</h2>
                 <p>Step into history and explore Byblos Citadel like never before. Discover ancient ruins, rich culture,
                     and hidden stories—all from your screen. Start your journey now!</p>
-                <a href="#" class="button">Start Virtual Tour</a>
+                <a href="#" class="button" onclick="openVRPopup(event)">Start Virtual Tour</a>
+
             </div>
 
         </div>
@@ -123,6 +124,28 @@
             </div>
         </div>
     </div>
+
+    <!-- VR Popup HTML -->
+    <div id="vr-popup" class="vr-popup" style="display: none;">
+        <div class="vr-popup-content">
+            <span class="vr-close" onclick="closeVRPopup()">&times;</span>
+            <iframe name="bybloscitadelvr" src="https://framevr.io/bybloscitadelvr"
+                allow="camera;microphone;display-capture;xr-spatial-tracking" scrolling="no" frameBorder="0">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function openVRPopup(event) {
+            event.preventDefault();
+            document.getElementById('vr-popup').style.display = 'flex';
+        }
+
+        function closeVRPopup() {
+            document.getElementById('vr-popup').style.display = 'none';
+        }
+    </script>
+
 
     <!-- Scripts -->
     <script src="chatbot.js"></script>

@@ -6,12 +6,9 @@
     <title>Byblos Citadel</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&family=EB+Garamond:wght@400;700&family=Fenix&family=Merriweather:wght@300;400&family=Radley&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+
 
 </head>
 
@@ -44,23 +41,22 @@
             </div>
         </nav>
         <div class="content-container">
-            <h1 class="title">BYBLOS CITADEL</h1>
         </div>
 
     </section>
 
     <section class="main-home">
         <div class="content-container">
-            <!-- <div class="textbot-virtualtour">
-                <h2>Virtual Tour</h2>
-                <p>Step into history and explore Byblos Citadel like never before. Discover ancient ruins, rich culture, and hidden stories—all from your screen. Start your journey now!</p>
-                <a href="#" class="button">Start Virtual Tour</a>
-            </div> -->
-            <div class="textbot-virtualtour">
-                <p style="font-size: 18px; color: #4A2E1C; font-weight: 600;"> Step into the heart of Byblos - where
-                    Crusaders built upon Phoenician stones, and
-                    history echoes in every wall.</p>
+
+            <div class="textbot-virtualtour new-welcome">
+                <h1><span class="line-top">THE BYBLOS</span><br><span class="line-bottom">CITADEL</span></h1>
+
+                <p>A metaverse experience</p>
+                <button class="button big-button" onclick="window.location.href='plan.html'">Plan your visit</button>
+
+
             </div>
+
 
         </div>
     </section>
@@ -72,19 +68,19 @@
                 <h3>Opening hours:</h3>
                 <ul>
                     <li>Monday through Friday: <br> 8:00 AM to 4:00 PM</li>
-                    <li>Sundays: <br> Only Museums Closed</li>
+                    <li>Sundays: Only Museums Closed</li>
                 </ul>
                 <h3>Entrance Fees:</h3>
                 <ul>
-                    <li>Lebanese Citizens: 150000L.L</li>
-                    <li>Visitors from other Arab Countries: 400000L.L</li>
-                    <li>Students: 75000L.L</li>
+                    <li>Lebanese Citizens: 150 000L.L</li>
+                    <li>Visitors from other Arab Countries: 400 000L.L</li>
+                    <li>Students: 75 000L.L</li>
                     <li><strong><em>Free Entrance for kids under 7 and for Byblos citizens</em></strong></li>
                 </ul>
             </div>
             <div class="location-box">
                 <h3>Location:</h3>
-                <p>Hill near Seaside Road, Near Byblos Fishing Port, Byblos, <br> Lebanon</p>
+                <p>Hill near Seaside Road, Near Byblos Fishing Port, Byblos, Lebanon</p>
                 <iframe width="100%" height="300" style="border:0; border-radius: 5px;" loading="lazy" allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.035303666732!2d35.64388531026653!3d34.11984591404734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f5cac247f1d31%3A0xeaa60abda1f03ce9!2sByblos%20Citadel!5e0!3m2!1sen!2slb!4v1737405392805!5m2!1sen!2slb">
@@ -93,6 +89,54 @@
             </div>
         </div>
     </section>
+    <section class="dont-miss-cards">
+        <h2 class="dont-miss-title">DON'T MISS</h2>
+        <div class="dont-miss-grid">
+
+            <!-- Restaurants -->
+            <div class="miss-card">
+                <img src="imgs/byblos-restaurant.jpg" alt="Restaurants Byblos">
+                <div class="miss-text">
+                    <h3>Restaurants</h3>
+                    <p>Enjoy authentic Lebanese cuisine or seafood with a view at top-rated restaurants around Byblos
+                        Citadel.</p>
+                    <a class="miss-link" href="restaurants.html">
+                        <span class="arrow-btn">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Accommodations -->
+            <div class="miss-card">
+                <img src="imgs/byblos-hotel.jpg" alt="Accommodations Byblos">
+                <div class="miss-text">
+                    <h3>Accommodations</h3>
+                    <p>From charming guesthouses to boutique hotels, stay close to the ruins in comfort and style.</p>
+                    <a class="miss-link" href="accomodations.html">
+                        <span class="arrow-btn">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Future Events -->
+            <div class="miss-card">
+                <img src="imgs/byblos-events.jpg" alt="Events Byblos">
+                <div class="miss-text">
+                    <h3>Future Events</h3>
+                    <p>Don’t miss the next cultural festival, concert, or open-air exhibition held within the Citadel or
+                        old
+                        souks.</p>
+                    <a class="miss-link" href="events.html">
+                        <span class="arrow-btn">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
 
     <!-- Sketchfab 3D Model Section -->
     <section class="citadel-3d">
@@ -210,15 +254,6 @@
         <img src="imgs/AUB_Main_Horizontal_RGB-01.png" alt="AUB logo" class="logo">
     </div>
 
-    <!-- VR Popup -->
-    <div id="vr-popup" class="vr-popup">
-        <div class="vr-popup-content">
-            <span class="vr-close">&times;</span>
-            <iframe name="bybloscitadelvr" src="https://framevr.io/bybloscitadelvr"
-                allow="camera;microphone;display-capture;xr-spatial-tracking" scrolling="no" frameBorder="0">
-            </iframe>
-        </div>
-    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -252,6 +287,36 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const slideshowImages = [
+            'imgs/render1.png',
+            'imgs/render5.png',
+            'imgs/render2.png',
+            'imgs/render4.png',
+            'imgs/render3.png'
+
+
+        ];
+
+        let currentIndex = 0;
+        const section = document.querySelector('.main-home');
+
+        function changeBackground() {
+            section.style.backgroundImage = `url('${slideshowImages[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % slideshowImages.length;
+        }
+
+        setInterval(changeBackground, 4000); // 4 seconds
+        changeBackground();
+    </script>
+
+
+
+    </div>
+    </section>
+
+
 
     <script src="script.js" defer></script>
     <script src="chatbot.js" defer></script>

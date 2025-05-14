@@ -28,14 +28,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Arial', sans-serif; */
     /* will change the font later */
 }
 
 /* Title (H1, Page Titles) */
 h1,
 .title {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Satoshi', serif;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -43,7 +42,7 @@ h1,
 
 /* Navigation Bar (Navbar Links) */
 .nav-links a {
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -51,53 +50,24 @@ h1,
 
 /* Subheadings (H3) */
 h3 {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Satoshi', sans-serif;
     font-weight: 600;
     font-size: 20px;
     text-transform: uppercase;
 }
 
+h2 {
+    font-family: 'Satoshi', sans-serif;
+}
+
 /* Paragraphs (Body Text, Descriptions) */
 .textbot-virtualtour p {
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', serif;
     font-size: 15px;
     line-height: 1.8;
 }
 
-/* h1, .title {
-    font-family: 'EB Garamond', serif;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
 
-.nav-links a {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-p {
-    font-family: 'Lora', serif;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-h2,
-h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-.button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-} */
 
 .more-text {
     display: none;
@@ -140,12 +110,11 @@ h3 {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('imgs/citadel\ renders_3\ -\ Photo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
 }
-
 
 @media (max-width: 480px) {
     .main-home {
@@ -190,67 +159,6 @@ h3 {
     padding-top: 10px;
 }
 
-/* .artifacts-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: #F3F1EF;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid rgba(74, 46, 28, 0.3);
-    width: 100%;
-    height: 110px;
-    background-color: #F3F1EF;
-    padding-top: 10px;
-} */
-
-/* .reviews-header{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: #e9e5e2;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid rgba(74, 46, 28, 0.3);
-    width: 100%;
-    height: 110px;
-    background-color: #e9e5e2;
-    padding-top: 10px;
-} */
-
-
-/* .history-header .title{
-    font-size: 35px;
-    color: #4A2E1C;
-    text-transform: uppercase;
-    text-align: start;
-    font-weight: bold;
-    padding-top: 30px;
-} */
-
-/* .artifacts-header .title{
-    font-size: 35px;
-        color: #4A2E1C;
-        text-transform: uppercase;
-        text-align: start;
-        font-weight: bold;
-        padding-top: 30px;
-}
-
-.reviews-header .title {
-    font-size: 35px;
-    color: #4A2E1C;
-    text-transform: uppercase;
-    text-align: start;
-    font-weight: bold;
-    padding-top: 30px;
-} */
 
 /* Navigation Bar */
 nav {
@@ -366,6 +274,7 @@ nav {
 .info-section {
     background-color: #e9e5e2;
     padding: 40px 7%;
+    font-family: 'Satoshi', sans-serif !important;
 }
 
 .info-container {
@@ -1789,7 +1698,7 @@ body {
 
 .timeline-section h2 {
     color: #4a2e1c;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Satoshi', serif;
     font-size: 32px;
     margin-bottom: 50px;
 }
@@ -1842,7 +1751,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #3e2714;
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', sans-serif;
 }
 
 .timeline-content em {
@@ -2097,7 +2006,7 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease;
     white-space: nowrap;
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', serif;
     z-index: 9999;
 }
 
@@ -2122,7 +2031,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', serif;
 }
 
 #chatbot-container.hidden {
@@ -2226,14 +2135,14 @@ body {
 .chat-input input,
 .chat-input button,
 .genie-bubble {
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', serif;
     font-size: 16px;
 }
 
 .user-message,
 .bot-message {
     font-size: 16px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Satoshi', serif;
 }
 
 html,
@@ -2249,4 +2158,201 @@ body {
 #chatbot-toggle {
     bottom: 40px;
     left: 40px;
+}
+
+.textbot-virtualtour.new-welcome {
+    position: absolute;
+    top: 22%;
+    left: 7%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+.textbot-virtualtour.new-welcome h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.textbot-virtualtour.new-welcome p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.button.big-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: #452F1C;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button.big-button:hover {
+    background-color: #a68445;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    max-width: 85%;
+    line-height: 1.5;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.message.bot {
+    background-color: #e8e4fc;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 6px 0;
+    max-width: 75%;
+    font-family: 'Satoshi', sans-serif;
+    white-space: pre-line;
+    /* <-- important for itinerary */
+}
+
+.message.user {
+    background-color: #ccf2d7;
+    align-self: flex-end;
+}
+
+.message.typing {
+    font-style: italic;
+    color: #999;
+}
+
+.itinerary-box {
+    white-space: pre-line;
+    background: #FFF7E6;
+    border: 2px dashed #DAB785;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 16px;
+    line-height: 1.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+.time-slot {
+    font-weight: bold;
+    color: #B66B00;
+}
+
+.textbot-virtualtour.new-welcome h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white;
+    line-height: 1.1;
+}
+
+.textbot-virtualtour.new-welcome {
+    max-width: 100%;
+    width: fit-content;
+}
+
+.byblos-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
+    /* 👈 THIS keeps it on one line */
+}
+
+.dont-miss-cards {
+    background-color: #fefaf6;
+    padding: 60px 7%;
+    text-align: center;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.dont-miss-title {
+    font-size: 36px;
+    color: #4A2E1C;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.dont-miss-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.miss-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.miss-card:hover {
+    transform: translateY(-5px);
+}
+
+.miss-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.miss-text {
+    padding: 20px;
+    flex: 1;
+}
+
+.miss-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #37271e;
+    margin-bottom: 10px;
+}
+
+.miss-text p {
+    font-size: 15px;
+    color: #4a2e1c;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.miss-link {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #a94b3d;
+    padding: 8px 12px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.miss-link:hover {
+    background-color: #82392f;
+}
+
+.arrow-btn {
+    font-size: 18px;
 }

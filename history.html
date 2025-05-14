@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -359,6 +362,28 @@
         </div>
     </section>
 
+    <!-- Time Travel Section -->
+    <section class="time-travel" data-aos="fade-up">
+        <h2>Byblos Through Time</h2>
+        <div class="time-container">
+            <!-- First Pair -->
+            <div class="before-after">
+                <img src="https://byblos-citadel.web.app/IMG_2842.JPG" class="old-image-1" alt="Old Byblos"
+                    loading="lazy">
+                <img src="https://byblos-citadel.web.app/IMG_2846.JPG" class="new-image-1" alt="New Byblos"
+                    loading="lazy">
+            </div>
+
+            <!-- Second Pair -->
+            <div class="before-after">
+                <img src="https://byblos-citadel.web.app/IMG_2845.JPG" class="old-image-2" alt="Old Byblos 2"
+                    loading="lazy">
+                <img src="https://byblos-citadel.web.app/IMG_2847.JPG" class="new-image-2" alt="New Byblos 2"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-container">
@@ -409,6 +434,17 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true,
+        });
+    </script>
+
+
+
 
     <!-- Scripts -->
     <script src="chatbot.js"></script>

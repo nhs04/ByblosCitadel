@@ -272,7 +272,7 @@ nav {
 
 /* INFO SECTION (Opening Hours & Location) */
 .info-section {
-    background-color: #e9e5e2;
+    background-color: #fff8f1;
     padding: 40px 7%;
     font-family: 'Satoshi', sans-serif !important;
 }
@@ -1707,8 +1707,7 @@ body {
     position: relative;
     max-width: 700px;
     margin: 0 auto;
-    padding-left: 20px;
-    border-left: 3px solid #a4723d;
+    padding-left: 0;
 }
 
 .timeline-item {
@@ -1727,7 +1726,8 @@ body {
 .timeline-icon {
     position: absolute;
     left: -35px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 28px;
     background-color: #fff;
     border: 2px solid #a4723d;
@@ -1825,7 +1825,7 @@ body {
 .time-travel {
     text-align: center;
     padding: 40px 0;
-    background-color: #e9e5e2;
+    background-color: rgb(255, 248, 241);
 }
 
 /* Flexbox to arrange two before-after containers side by side */
@@ -1884,7 +1884,7 @@ body {
 .citadel-3d {
     text-align: center;
     padding: 60px 0;
-    background-color: #e9e5e2;
+    background-color: rgb(255, 248, 241);
 }
 
 .model-viewer iframe {
@@ -1898,7 +1898,7 @@ body {
 .citadel-gallery {
     text-align: center;
     padding: 50px 0;
-    background-color: #e6e0da;
+    background-color: rgb(254, 250, 246);
 
 }
 
@@ -2295,6 +2295,14 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+}
+
+.custom-section-title {
+    font-size: 32px;
+    color: #4A2E1C;
+    margin-bottom: 40px;
+    font-family: 'Satoshi', sans-serif;
+    text-transform: none;
 }
 
 .miss-card {

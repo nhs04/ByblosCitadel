@@ -2397,3 +2397,71 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.timelinem-section {
+    background-color: #fefcf8;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.timelinem-section h2 {
+    color: #4a2e1c;
+    font-family: 'Satoshi', serif;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.timelinem {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.timelinem-item {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+.timelinem-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timelinem-icon {
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    background-color: #fff;
+    border: 2px solid #a4723d;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timelinem-content {
+    background-color: #fff8f1;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.timelinem-content h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3e2714;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.button {
+    font-family: 'Satoshi', sans-serif !important;
+}

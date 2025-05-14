@@ -2,12 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Museum - Byblos Citadel</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+        .museum-home {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .textbot-virtualtour.new-welcome {
+            position: absolute;
+            top: 22%;
+            left: 7%;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+
+        .textbot-virtualtour.new-welcome h1 {
+            font-family: 'Satoshi', sans-serif;
+            font-size: 55px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: white;
+            line-height: 1.1;
+        }
+
+        .textbot-virtualtour.new-welcome p {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .info-banner {
+            background-color: #4A2E1C;
+            color: white;
+            text-align: center;
+            padding: 14px 0;
+            font-family: 'Satoshi', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .museum-description {
+            background-color: #f8f5f0;
+            padding: 50px 7% 40px;
+            font-family: 'Satoshi', serif;
+        }
+
+        .description-container {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #3b2a20;
+            font-size: 17px;
+            line-height: 1.9;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body class="museum-body">
@@ -39,25 +105,91 @@
             </div>
         </nav>
         <div class="content-container">
-            <h1 class="title">MUSEUM</h1>
+            <h1 class="title"></h1>
         </div>
     </section>
 
-    <section class="museum-home">
+    <!-- 🟠 Museum Slideshow Homepage -->
+    <section class="museum-home" id="museumSlideshow">
         <div class="content-container">
-            <div class="textbot-virtualtour">
-                <h2>Virtual Tour</h2>
-                <p>Step into history and explore Byblos Citadel like never before. Discover ancient ruins, rich culture,
-                    and hidden stories—all from your screen. Start your journey now!</p>
-                <a href="#" class="button" onclick="openVRPopup(event)">Start Virtual Tour</a>
-
+            <div class="textbot-virtualtour new-welcome">
+                <h1>THE MUSEUM</h1>
+                <p>Step into history through a virtual journey</p>
+                <a href="#" class="button big-button" onclick="openVRPopup(event)">Start Virtual Tour</a>
             </div>
-
         </div>
     </section>
+
+    <!-- Opening Hours Section -->
+    <section class="info-banner">
+        <p class="info-banner-text">Open daily from 8:00 AM to 6:30 PM</p>
+    </section>
+
+    <!-- Museum Description Section -->
+    <section class="museum-description">
+        <div class="description-container">
+            <p>
+                Nestled inside the Crusader Castle, the Museum of the Archaeological Site of Byblos invites you on a
+                journey
+                through time. Every artifact, inscription, and object reveals part of the city's deep past — from
+                Neolithic
+                tools to Phoenician sarcophagi and Roman remains.
+            </p>
+            <p>
+                The collection comes from decades of excavations carried out right on-site. Visitors can explore items
+                displayed just steps away from where they were uncovered, creating a powerful connection to the land and
+                its
+                history.
+            </p>
+            <p>
+                Whether you're a traveler, a student, or simply curious, this museum offers a rare chance to connect
+                with
+                the origins of civilization and see where the alphabet was born.
+            </p>
+        </div>
+    </section>
+
+    <section class="timelinem-section" data-aos="fade-up">
+        <h2>Types of Artifacts Found in the Museum</h2>
+
+        <div class="timelinem">
+            <div class="timelinem-item">
+                <div class="timelinem-icon">✝️</div>
+                <div class="timelinem-content">
+                    <h3>Religious Artifacts</h3>
+                </div>
+            </div>
+            <div class="timelinem-item">
+                <div class="timelinem-icon">🏺</div>
+                <div class="timelinem-content">
+                    <h3>Pottery & Domestic Life</h3>
+                </div>
+            </div>
+            <div class="timelinem-item">
+                <div class="timelinem-icon">🪙</div>
+                <div class="timelinem-content">
+                    <h3>Trade & Economy</h3>
+                </div>
+            </div>
+            <div class="timelinem-item">
+                <div class="timelinem-icon">⚔️</div>
+                <div class="timelinem-content">
+                    <h3>Weapons & Warfare</h3>
+                </div>
+            </div>
+        </div>
+        <p style="font-family: 'Satoshi', sans-serif; font-size: 16px; margin-top: 40px;">
+            For more details, <a href="artifacts.html" style="color: #603B24; font-weight: bold;">click here to explore
+                the
+                full collection.</a>
+        </p>
+    </section>
+
+
+
 
     <!-- Sketchfab 3D Model Section -->
-    <section class="museum-3d">
+    <section class="museum-3d" data-aos="fade-up">
         <h2>Explore in 3D</h2>
         <div class="model-viewer">
             <iframe src="https://sketchfab.com/models/189eaed9ee3b4a7088ead3277f4e2962/embed" allowfullscreen></iframe>
@@ -65,13 +197,13 @@
     </section>
 
     <!-- Rendered Pictures Section -->
-    <section class="museum-gallery">
-        <h2>Rendered Images</h2>
+    <section class="museum-gallery" data-aos="fadeInSlide">
+        <h2>Museum Interior in 3D Renders</h2>
         <div class="image-grid">
-            <img src="imgs/museum renders_1 - Photo.jpg" alt="Rendered Image 1">
-            <img src="imgs/museum renders_2 - Photo.jpg" alt="Rendered Image 2">
-            <img src="imgs/museum renders_3 - Photo.jpg" alt="Rendered Image 3">
-            <img src="imgs/museum renders_4 - Photo.jpg" alt="Rendered Image 4">
+            <img src="imgs/museum renders_1 - Photo.webp" alt="Rendered Image 1">
+            <img src="imgs/museum renders_2 - Photo.webp" alt="Rendered Image 2">
+            <img src="imgs/museum renders_3 - Photo.webp" alt="Rendered Image 3">
+            <img src="imgs/museum renders_4 - Photo.webp" alt="Rendered Image 4">
         </div>
     </section>
 
@@ -130,8 +262,7 @@
         <div class="vr-popup-content">
             <span class="vr-close" onclick="closeVRPopup()">&times;</span>
             <iframe name="bybloscitadelvr" src="https://framevr.io/bybloscitadelvr"
-                allow="camera;microphone;display-capture;xr-spatial-tracking" scrolling="no" frameBorder="0">
-            </iframe>
+                allow="camera;microphone;display-capture;xr-spatial-tracking" scrolling="no" frameBorder="0"></iframe>
         </div>
     </div>
 
@@ -144,12 +275,76 @@
         function closeVRPopup() {
             document.getElementById('vr-popup').style.display = 'none';
         }
+
+        const slideshowImages = [
+            'imgs/museum renders_1 - Photo.webp',
+            'imgs/museum renders_2 - Photo.webp',
+            'imgs/museum renders_3 - Photo.webp',
+            'imgs/museum renders_4 - Photo.webp'
+        ];
+
+        let currentIndex = 0;
+        const museumSection = document.getElementById("museumSlideshow");
+
+        function changeBackground() {
+            museumSection.style.backgroundImage = `url('${slideshowImages[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % slideshowImages.length;
+        }
+
+        setInterval(changeBackground, 4000);
+        changeBackground();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.timelinem-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="document.getElementById('imageModal').style.display='none'">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        document.querySelectorAll('.museum-gallery .image-grid img').forEach(img => {
+            img.addEventListener('click', () => {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImg');
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+            });
+        });
+
+        // Close on outside click
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target.id === 'imageModal') {
+                e.currentTarget.style.display = 'none';
+            }
+        });
     </script>
 
 
-    <!-- Scripts -->
-    <script src="chatbot.js"></script>
 
+
+
+    <script src="chatbot.js"></script>
 </body>
 
 </html>

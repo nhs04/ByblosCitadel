@@ -188,7 +188,7 @@
                     await addMessage(opt, "user");
                     const loadingBubble = await addMessage("Typing...", "bot");
 
-                    fetch("http://byblos-ai-planbot.onrender.com/start", {
+                    fetch("https://byblos-ai-planbot.onrender.com/start", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ message: opt, session_id: sessionId })
@@ -204,7 +204,7 @@
                                 step++;
                             } else {
                                 const waiting = await addMessage("🛠 Preparing your personalized itinerary...", "bot");
-                                fetch("http://byblos-ai-planbot.onrender.com/itinerary", {
+                                fetch("https://byblos-ai-planbot.onrender.com/itinerary", {
                                     method: "POST",
                                     headers: { "Content-Type": "application/json" },
                                     body: JSON.stringify({ session_id: sessionId })

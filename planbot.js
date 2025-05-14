@@ -65,7 +65,7 @@ function nextStep() {
 
     addMessage("✨ Preparing your itinerary...", "bot");
 
-    fetch("https://byblos-ai-planbot.onrender.com", {
+    fetch("https://byblos-ai-planbot.onrender.com/itinerary", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: sessionId })

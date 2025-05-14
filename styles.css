@@ -2524,3 +2524,23 @@ body {
     cursor: pointer;
     z-index: 10000;
 }
+
+.museum-video {
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+.museum-video-title {
+    font-size: 32px;
+    color: #4A2E1C;
+    /* Same as "Explore in 3D" */
+    margin-bottom: 25px;
+    /* Space between title and video */
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+
+.video-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

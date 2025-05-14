@@ -2562,8 +2562,24 @@ body {
 }
 
 .video-container iframe {
-    width: 70%;
-    height: 420px;
+    width: 70% !important;
+    height: 420px !important;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.homepage-video-section {
+    background-color: #e9e5e2;
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.homepage-video-title {
+    font-size: 32px;
+    color: #4A2E1C;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    margin-bottom: 25px;
 }

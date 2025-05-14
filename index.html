@@ -8,6 +8,8 @@
     <script src="script.js" defer></script>
 
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 
 </head>
@@ -61,7 +63,7 @@
         </div>
     </section>
 
-    <section class="timeline-section">
+    <section class="timeline-section" data-aos="fade-up">
         <h2>Why Visit the Byblos Citadel?</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -92,7 +94,7 @@
     </section>
 
     <!-- Info section -->
-    <section class="info-section">
+    <section class="info-section" data-aos="fade-up">
         <div class="info-container">
             <div class="info-box">
                 <h3>Opening hours:</h3>
@@ -119,7 +121,7 @@
             </div>
         </div>
     </section>
-    <section class="dont-miss-cards">
+    <section class="dont-miss-cards" data-aos="fade-up">
         <h2 class="dont-miss-title">DON'T MISS</h2>
         <div class="dont-miss-grid">
 
@@ -169,7 +171,7 @@
 
 
     <!-- Sketchfab 3D Model Section -->
-    <section class="citadel-3d">
+    <section class="citadel-3d" data-aos="fade-up">
         <h2 class="custom-section-title">Can’t go live? Discover it virtually in 3D.</h2>
 
         <div class="model-viewer">
@@ -179,21 +181,27 @@
 
 
     <!-- Rendered Pictures Section -->
-    <section class="citadel-gallery">
+    <section class="citadel-gallery" data-aos="fadeInSlide">
         <h2 class="custom-section-title">Byblos Citadel in the Metaverse</h2>
 
         <div class="image-grid">
-            <img src="imgs/render1.webp" alt="Rendered Image 1" loading="lazy">
-            <img src="imgs/render2.webp" alt="Rendered Image 2" loading="lazy">
-            <img src="imgs/render3.webp" alt="Rendered Image 3" loading="lazy">
-            <img src="imgs/render4.webp" alt="Rendered Image 4" loading="lazy">
-
+            <img src="imgs/render1.webp" alt="Rendered Image 1" loading="lazy" onclick="openModal(this)">
+            <img src="imgs/render2.webp" alt="Rendered Image 2" loading="lazy" onclick="openModal(this)">
+            <img src="imgs/render3.webp" alt="Rendered Image 3" loading="lazy" onclick="openModal(this)">
+            <img src="imgs/render4.webp" alt="Rendered Image 4" loading="lazy" onclick="openModal(this)">
         </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
     </section>
 
 
     <!-- Time Travel Section -->
-    <section class="time-travel">
+    <section class="time-travel" data-aos="fade-up">
         <h2>Byblos Through Time</h2>
         <div class="time-container">
             <!-- First Pair -->
@@ -315,6 +323,29 @@
 
     </div>
     </section>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+        }
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // animation happens only once
+            duration: 800, // duration of animation
+            offset: 150 // trigger point
+        });
+    </script>
+
+
 
 
 

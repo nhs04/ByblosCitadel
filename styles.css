@@ -2189,14 +2189,18 @@ body {
     padding: 12px 24px;
     background-color: #452F1C;
     color: white;
-    border-radius: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .button.big-button:hover {
-    background-color: #a68445;
+    background-color: #6b4630;
+    transform: scale(1.03);
 }
 
 .message {
@@ -2363,4 +2367,33 @@ body {
 
 .arrow-btn {
     font-size: 18px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }

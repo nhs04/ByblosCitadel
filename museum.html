@@ -105,7 +105,7 @@
             </div>
         </nav>
         <div class="content-container">
-            <h1 class="title"></h1>
+            <h1 class="title">MUSEUM</h1>
         </div>
     </section>
 
@@ -193,13 +193,14 @@
     <!-- Museum Intro Video Section -->
     <section class="museum-video" data-aos="fade-up">
         <h2 class="museum-video-title">Immersive Museum Preview</h2>
-        <div class="video-container">
-            <iframe width="70%" height="420"
-                src="https://www.youtube.com/embed/8i2FBIbhLu0?autoplay=1&mute=1&loop=1&playlist=8i2FBIbhLu0&rel=0&showinfo=0&controls=1"
+        <div class="museum-video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/8i2FBIbhLu0?autoplay=1&mute=1&loop=1&playlist=8i2FBIbhLu0&rel=0&vq=hd1080"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
-
         </div>
+
+
     </section>
 
 
@@ -355,6 +356,65 @@
             }
         });
     </script>
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeBtn = document.querySelector('.close-btn');
+            const genie = document.getElementById('chatbot-toggle');
+
+            if (hamburger && mobileMenu && closeBtn && genie) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.add('show');
+                    genie.style.display = 'none'; // hides genie when menu opens
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('show');
+                    genie.style.display = 'block'; // shows genie again
+                });
+            }
+
+            const genieIcon = document.getElementById('genie-icon');
+            const chatbotContainer = document.getElementById('chatbot-container');
+
+            genieIcon.addEventListener('click', () => {
+                chatbotContainer.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script>
+        const genieIcon = document.getElementById("genie-icon");
+        const chatbotContainer = document.getElementById("chatbot-container");
+
+        genieIcon.addEventListener("click", () => {
+            chatbotContainer.classList.toggle("hidden");
+        });
+
+        function sendMessage() {
+            const userInput = document.getElementById("user-input");
+            const message = userInput.value.trim();
+            if (message !== "") {
+                const chatMessages = document.getElementById("chat-messages");
+                const userMessage = document.createElement("div");
+                userMessage.textContent = "You: " + message;
+                userMessage.className = "user-message";
+                chatMessages.appendChild(userMessage);
+                userInput.value = "";
+                // Simulate bot response
+                const botMessage = document.createElement("div");
+                botMessage.textContent = "Genie: (response placeholder)";
+                botMessage.className = "bot-message";
+                chatMessages.appendChild(botMessage);
+            }
+        }
+    </script>
+
+
+
+
 
 
 

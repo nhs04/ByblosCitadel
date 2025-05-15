@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&family=EB+Garamond:wght@400;700&family=Fenix&family=Merriweather:wght@300;400&family=Radley&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&family=EB+Garamond:wght@400;700&family=Fenix&family=Merriweather:wght@300;400&family=Radley&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
 </head>
+
 <body>
 
     <!-- Header Section -->
@@ -25,9 +31,25 @@
                 </ul>
             </div>
         </nav>
-        
+
         <h1 class="team-title">OUR TEAM</h1>
     </section>
+
+    <div class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="museum.html">Museum</a></li>
+            <li><a href="artifacts.html">Artifacts</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </div>
+
 
     <!-- Team Section -->
     <section class="profile-container">
@@ -62,18 +84,22 @@
         </div>
 
         <div class="team-text">
-             <p>
-            Our team, senior students at the American University of Beirut, has successfully digitalized the Byblos Citadel as part of our final year project. Using photogrammetry and advanced 3D modeling techniques, we have created a fully interactive virtual experience that allows users—whether tourists, students, or history enthusiasts—to explore this iconic cultural heritage site remotely. Through our web-based platform, visitors can navigate the citadel, view high-resolution reconstructions, and engage with its rich history in an immersive and educational way. Our goal was to bridge the gap between technology and cultural preservation, making historical exploration more accessible and engaging for a global audience.
-        </p>
+            <p>
+                Our team, senior students at the American University of Beirut, has successfully digitalized the Byblos
+                Citadel as part of our final year project. Using photogrammetry and advanced 3D modeling techniques, we
+                have created a fully interactive virtual experience that allows users—whether tourists, students, or
+                history enthusiasts—to explore this iconic cultural heritage site remotely. Through our web-based
+                platform, visitors can navigate the citadel, view high-resolution reconstructions, and engage with its
+                rich history in an immersive and educational way. Our goal was to bridge the gap between technology and
+                cultural preservation, making historical exploration more accessible and engaging for a global audience.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <div class="footer-column">
-                <h4><a href="team.html">Our Team</a></h4>
-            </div>
+
             <div class="footer-column">
                 <h4><a href="contact.html">Contact Us</a></h4>
             </div>
@@ -87,7 +113,7 @@
             <div class="footer-item">
                 <i class="fas fa-phone"></i>
                 <p>+961 9 540 001</p>
-            </div>            
+            </div>
             <div class="footer-item">
                 <i class="fas fa-envelope"></i>
                 <p>bybloscitadel@yahoo.com</p>
@@ -95,12 +121,31 @@
         </div>
     </footer>
 
-     <!-- Copyright -->
-      <div class="copyright">
-    <img src="imgs/daad_logo_suppl_de+en_h_basic_rgb-removebg-preview.png" alt="DAAD logo" class="logo daad">
-    <p>&copy; 2025 AUB STUDENTS - All Rights Reserved</p>
-    <img src="imgs/AUB_Main_Horizontal_RGB-01.png" alt="AUB logo" class="logo">
-    </div>
-    
+    <!-- Copyright -->
+
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeBtn = document.querySelector('.close-btn');
+            const genie = document.getElementById('chatbot-toggle');
+
+            if (hamburger && mobileMenu && closeBtn && genie) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.add('show');
+                    genie.style.display = 'none';  // 👈 Hides the Genie
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('show');
+                    genie.style.display = 'block'; // 👈 Shows the Genie again
+                });
+            }
+        });
+    </script>
+
 </body>
+
 </html>

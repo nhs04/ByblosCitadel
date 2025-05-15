@@ -652,31 +652,7 @@ footer {
     background-color: #8B5E3B;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    justify-content: center;
-    align-items: center;
-}
 
-/* Modal Content */
-.modal-content {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-}
 
 /* Close Button */
 .close {
@@ -2398,20 +2374,25 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 10000;
-    left: 0;
+    z-index: 99999;
     top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.85);
     justify-content: center;
     align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .modal-content {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
 }
 
 .modal .close {
@@ -2420,9 +2401,22 @@ body {
     right: 30px;
     font-size: 36px;
     color: white;
-    font-weight: bold;
     cursor: pointer;
+    z-index: 100000;
 }
+
+
+
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+}
+
+
 
 .timelinem-section {
     background-color: #fefcf8;
@@ -2571,7 +2565,7 @@ body {
 }
 
 .homepage-video-section {
-    background-color: #e9e5e2;
+    background-color: #fefcf8;
     text-align: center;
     padding: 60px 0 40px;
 }
@@ -2582,4 +2576,268 @@ body {
     font-family: 'EB Garamond', serif;
     font-weight: bold;
     margin-bottom: 25px;
+}
+
+/* ✅ Chatbot Responsive Fix */
+@media (max-width: 768px) {
+    #chatbot-toggle {
+        bottom: 20px;
+        left: 10px;
+        width: 70px;
+    }
+
+    #lamp-tooltip {
+        font-size: 12px;
+        padding: 6px 10px;
+        bottom: 130%;
+    }
+
+    #chatbot-container {
+        bottom: 80px;
+        left: 10px;
+        width: 90vw;
+        height: 80vh;
+        border-radius: 12px;
+    }
+
+    .chat-input input {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .chat-input button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* ✅ Hero Section Text Scaling */
+@media (max-width: 768px) {
+    .textbot-virtualtour.new-welcome h1 {
+        font-size: 32px;
+    }
+
+    .textbot-virtualtour.new-welcome p {
+        font-size: 16px;
+    }
+
+    .button.big-button {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+}
+
+/* ✅ YouTube Video Responsive */
+@media (max-width: 768px) {
+    .museum-video iframe {
+        width: 100% !important;
+        height: 240px !important;
+    }
+}
+
+/* ✅ Sketchfab 3D Model */
+@media (max-width: 768px) {
+    .model-viewer iframe {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+/* ✅ Footer Wrapping */
+@media (max-width: 768px) {
+
+    .footer-container,
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-item {
+        justify-content: center;
+    }
+
+    .copyright {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 11px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .timelinem {
+        padding-left: 15px;
+    }
+
+    .timelinem-item {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .timelinem-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 22px;
+        background-color: #fff;
+        border: 2px solid #a4723d;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .timelinem-content {
+        background-color: #fff8f1;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 100%;
+    }
+
+    .timelinem-content h3 {
+        font-size: 16px;
+        color: #3e2714;
+    }
+}
+
+@media (max-width: 600px) {
+    .timelinem {
+        padding: 0 20px;
+    }
+
+    .timelinem-item {
+        margin-bottom: 25px;
+    }
+
+    .timelinem-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline {
+        padding: 0 20px;
+    }
+
+    .timeline-item {
+        margin-bottom: 25px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+}
+
+.image-viewer-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.viewer-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+.image-viewer-modal .close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.custom-video-wrapper {
+    width: 70%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 39.375%;
+    /* 16:9 for 70% width */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.custom-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.homepage-video-section {
+    background-color: #fefaf6;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.homepage-video-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 36px;
+    color: #4A2E1C;
+    margin-bottom: 40px;
+    text-transform: none;
+}
+
+.museum-video-wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.museum-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    object-fit: cover;
+    display: block;
+}
+
+.index-video-wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.index-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
 }

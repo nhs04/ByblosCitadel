@@ -7,6 +7,8 @@
     <title>Artifacts - Byblos Citadel</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
     <script src="script.js" defer></script>
 </head>
 
@@ -209,6 +211,29 @@
             img.addEventListener('click', () => openImageViewer(img.src));
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeBtn = document.querySelector('.close-btn');
+            const genie = document.getElementById('chatbot-toggle');
+
+            if (hamburger && mobileMenu && closeBtn && genie) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.add('show');
+                    genie.style.display = 'none';  // 👈 Hides the Genie
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('show');
+                    genie.style.display = 'block'; // 👈 Shows the Genie again
+                });
+            }
+        });
+    </script>
+
+
     <script src="chatbot.js" defer></script>
 
 

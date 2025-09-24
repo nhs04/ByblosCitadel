@@ -1,8 +1,7 @@
 This project aimed to preserve and present the historic Byblos Citadel using immersive technology.
 ✨ It was honored with two awards:
-
-  1.🥇 Best Final Year Project in the Computer Science Department (2025)
-  2.🏆 Best Presentation & Best Poster by DAAD
+- 🥇 Best Final Year Project in the Computer Science Department (2025)
+- 🏆 Best Presentation & Best Poster by DAAD
 
 We built:
 - An interactive website showcasing the Byblos Citadel with 3D models, rendered images/videos, and a full VR museum tour
@@ -11,7 +10,7 @@ We built:
 - Rich historical content 📜, touristic information 🏖️, and visitor reviews ⭐
 
 Tech stack:
-  Frontend: React ⚛️
-  AI: Mistral LLM + Flask API 🤖
-  Backend & storage: Python, Firebase 
-  3D reconstruction & VR: Blender 🎨, Lumion 🌄, Metashape 📷, FrameVR 🎮
+- Frontend: React ⚛️
+- AI: Mistral LLM + Flask API 🤖
+- Backend & storage: Python, Firebase
+- 3D reconstruction & VR: Blender 🎨, Lumion 🌄, Metashape 📷, FrameVR 🎮
